@@ -1,0 +1,94 @@
+body {
+    font-family: Outfit, Arial;
+    font-size: 16px;
+    margin: 0 0 0 0;
+    padding-bottom: 1000px;
+}
+
+.header {
+    height: 213.6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: gray;
+    margin: 5px 0 10px 0;
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 112.6px;
+}
+
+.github-button {
+    border: none;
+    border-radius: 25px;
+    padding: 0 0 0 0;
+    height: 43px;
+    width: 43px;
+    cursor: pointer;
+    transition: transform 0.15s ease,
+                box-shadow 0.15s ease;
+}
+
+.github-button:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.github-button:active {
+    transform: scale(1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.github-logo {
+    height: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+}
+
+.linkedin-button {
+    border: none;
+    border-radius: 25px;
+    padding: 0 0 0 0;
+    background-color: aqua;
+    height: 43px;
+    width: 43px;
+    cursor: pointer;
+    transition: transform 0.15s ease,
+                box-shadow 0.15s ease;
+}
+
+.linkedin-button:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.linkedin-button:active {
+    transform: scale(1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.linkedin-logo {
+    height: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+}

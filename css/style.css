@@ -2,23 +2,34 @@ body {
     font-family: Outfit, Arial;
     font-size: 16px;
     margin: 0 0 0 0;
-    padding-bottom: 1000px;
+}
+
+p {
+    margin-top: 8px;
 }
 
 .header {
-    height: 213.6px;
+    height: 237.9px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: rgba(0, 0, 0, 0.05);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h1 {
     font-size: 34px;
     font-weight: 400;
-    padding: 0;
     margin: 0;
 }
 
@@ -26,13 +37,14 @@ h2 {
     font-size: 18px;
     font-weight: 400;
     color: gray;
-    margin: 5px 0 10px 0;
-    text-align: center;
+    margin: 0;
+    padding: 5px 0 10px 0;
 }
+
+/* ------------------------------------------------------------------------ */
 
 .links {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 112.6px;
@@ -40,36 +52,21 @@ h2 {
 
 .github-button {
     border: none;
-    border-radius: 25px;
+    border-radius: 22px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     padding: 0 0 0 0;
     height: 43px;
     width: 43px;
     cursor: pointer;
     transition: transform 0.15s ease,
                 box-shadow 0.15s ease;
-}
-
-.github-button:hover {
-    transform: scale(1.15);
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
-}
-
-.github-button:active {
-    transform: scale(1);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-.github-logo {
-    height: 100%;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 25px;
 }
 
 .linkedin-button {
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     padding: 0 0 0 0;
-    background-color: aqua;
     height: 43px;
     width: 43px;
     cursor: pointer;
@@ -77,18 +74,186 @@ h2 {
                 box-shadow 0.15s ease;
 }
 
+.github-button:hover,
 .linkedin-button:hover {
     transform: scale(1.15);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
 }
 
+.github-button:active,
 .linkedin-button:active {
     transform: scale(1);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+.github-logo,
 .linkedin-logo {
     height: 100%;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 7px;
 }
+
+.github-button,
+.linkedin-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.github-button .tooltip,
+.linkedin-button .tooltip {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.github-button:hover .tooltip,
+.linkedin-button:hover .tooltip {
+    opacity: 1;
+}
+
+/* ------------------------------------------------------------------------ */
+
+.background {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding-bottom: 50px;
+}
+
+main {
+    width: 61.8%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: -10px 0 10px -5px rgba(0, 0, 0, 0.15),
+                 10px 10px 10px -5px rgba(0, 0, 0, 0.15);
+    padding-top: 20px;
+    padding-bottom: 1000px;               
+}
+
+section {
+    padding: 20px 0 20px 0;
+    width: 61.8%;
+}
+
+/* ------------------------------------------------------------------------ */
+
+.skills-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 24px 0 24px 0;
+}
+
+.skill-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: none;
+    border-radius: 22px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 0 0 0 0;
+    height: 43px;
+    width: 43px;
+    cursor: pointer;
+    transition: transform 0.15s ease,
+                box-shadow 0.15s ease;
+}
+
+.skill-button:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.skill-button:active {
+    transform: scale(1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.python-logo {
+    height: 90%;
+    position: absolute;
+    top: 5px;
+}
+
+.cpp-logo {
+    height: 80%;
+}
+
+.tensorflow-logo {
+    height: 80%;
+}
+
+.huggingface-logo {
+    height: 80%;
+}
+
+.nvidia-logo {
+    height: 60%;
+    position: absolute;
+    top: 7px;
+}
+
+.aws-logo {
+    height: 100%;
+    border-radius: 22px;
+}
+
+.gcp-logo {
+    height: 80%;
+}
+
+.git-logo {
+    height: 80%;
+}
+
+.postgresql-logo {
+    height: 80%;
+    position: absolute;
+    top: 7px;
+}
+
+.logo {
+    height: 100%;
+}
+
+.skill-button .tooltip {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.skill-button:hover .tooltip {
+    opacity: 1;
+}
+
+/* ------------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------------ */

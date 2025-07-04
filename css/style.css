@@ -222,7 +222,7 @@ main {
     box-shadow: -10px 0 10px -5px var(--shadow-color),
                  10px 10px 10px -5px var(--shadow-color);
     padding-top: 20px;
-    padding-bottom: 1000px;
+    padding-bottom: 100px;
     transition: background-color 1s ease,
                 box-shadow 1s ease;         
 }

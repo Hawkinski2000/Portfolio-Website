@@ -2,10 +2,77 @@ body {
     font-family: Outfit, Arial;
     font-size: 16px;
     margin: 0 0 0 0;
+    --header-color: rgba(0, 0, 0, 0.05);
+    --background-color: rgba(0, 0, 0, 0.1);
+    --main-color: white;
+    --text-color: black;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --button-shadow-color: rgba(0, 0, 0, 0.5);
+    --alt-button-shadow-color: rgba(0, 0, 0, 0.25);
+}
+
+.theme-button {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 22px;
+    box-shadow: 0 5px 10px var(--button-shadow-color);
+    padding: 0 0 0 0;
+    height: 43px;
+    width: 43px;
+    position: absolute;
+    right: 32.7px;
+    top: 32.7px;
+    z-index: 1;
+    cursor: pointer;
+    transition: transform 0.15s ease,
+                box-shadow 0.15s ease;
+}
+
+.theme-button:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 10px var(--alt-button-shadow-color);
+}
+
+.theme-button:active {
+    transform: scale(1);
+    box-shadow: 0 5px 10px var(--button-shadow-color);
+}
+
+.theme-icon {
+    height: 123%;
+}
+
+#theme-checkbox:checked ~ .page {
+  --header-color: rgba(0, 0, 0, 0.95);
+  --text-color: white;
+  --shadow-color: rgba(255, 255, 255, 0.15);
+  --button-shadow-color: rgba(255, 255, 255, 0.5);
+  --alt-button-shadow-color: rgba(255, 255, 255, 0.25);
+  --background-color: rgba(0, 0, 0, 0.9);
+  --main-color: black;
+}
+
+#theme-checkbox:checked ~ .theme-button {
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+#theme-checkbox:checked ~ .theme-button:hover {
+  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.25);
+}
+
+#theme-checkbox:checked ~ .theme-button:active {
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
 }
 
 p {
     margin-top: 8px;
+    padding: 0.89px 0 0 0;
+    margin: 0;
+    color: var(--text-color);
+    transition: color 1s ease;
 }
 
 .header {
@@ -15,9 +82,11 @@ p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.05);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    background-color: var(--header-color);
+    box-shadow: 0 10px 15px var(--shadow-color);
     position: relative;
+    transition: background-color 1s ease,
+                box-shadow 1s ease;
 }
 
 .header-content {
@@ -31,6 +100,8 @@ h1 {
     font-size: 34px;
     font-weight: 400;
     margin: 0;
+    color: var(--text-color);
+    transition: color 1s ease;
 }
 
 h2 {
@@ -39,6 +110,7 @@ h2 {
     color: gray;
     margin: 0;
     padding: 5px 0 10px 0;
+    transition: color 1s ease;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -51,9 +123,10 @@ h2 {
 }
 
 .github-button {
+    background-color: white;
     border: none;
     border-radius: 22px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px var(--button-shadow-color);
     padding: 0 0 0 0;
     height: 43px;
     width: 43px;
@@ -63,9 +136,10 @@ h2 {
 }
 
 .linkedin-button {
+    background-color: white;
     border: none;
     border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px var(--button-shadow-color);
     padding: 0 0 0 0;
     height: 43px;
     width: 43px;
@@ -77,16 +151,19 @@ h2 {
 .github-button:hover,
 .linkedin-button:hover {
     transform: scale(1.15);
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 10px var(--alt-button-shadow-color);
 }
 
 .github-button:active,
 .linkedin-button:active {
     transform: scale(1);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px var(--button-shadow-color);
 }
 
-.github-logo,
+.github-logo {
+    height: 100%;
+}
+
 .linkedin-logo {
     height: 100%;
 }
@@ -100,7 +177,8 @@ h2 {
 }
 
 .github-button .tooltip,
-.linkedin-button .tooltip {
+.linkedin-button .tooltip,
+.theme-button .tooltip {
     position: absolute;
     background-color: gray;
     color: white;
@@ -118,7 +196,8 @@ h2 {
 }
 
 .github-button:hover .tooltip,
-.linkedin-button:hover .tooltip {
+.linkedin-button:hover .tooltip,
+.theme-button:hover .tooltip {
     opacity: 1;
 }
 
@@ -127,22 +206,25 @@ h2 {
 .background {
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--background-color);
     padding-bottom: 50px;
+    transition: background-color 1s ease;
 }
 
 main {
     width: 61.8%;
     height: 100%;
-    background-color: white;
+    background-color: var(--main-color);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    box-shadow: -10px 0 10px -5px rgba(0, 0, 0, 0.15),
-                 10px 10px 10px -5px rgba(0, 0, 0, 0.15);
+    box-shadow: -10px 0 10px -5px var(--shadow-color),
+                 10px 10px 10px -5px var(--shadow-color);
     padding-top: 20px;
-    padding-bottom: 1000px;               
+    padding-bottom: 1000px;
+    transition: background-color 1s ease,
+                box-shadow 1s ease;         
 }
 
 section {
@@ -154,19 +236,20 @@ section {
 
 .skills-row {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 24px 0 24px 0;
+    padding: 26.6px 0 26.6px 0;
 }
 
 .skill-button {
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     border: none;
     border-radius: 22px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px var(--button-shadow-color);
     padding: 0 0 0 0;
     height: 43px;
     width: 43px;
@@ -177,12 +260,12 @@ section {
 
 .skill-button:hover {
     transform: scale(1.15);
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 10px var(--alt-button-shadow-color);
 }
 
 .skill-button:active {
     transform: scale(1);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 10px var(--button-shadow-color);
 }
 
 .python-logo {
@@ -210,7 +293,7 @@ section {
 }
 
 .aws-logo {
-    height: 100%;
+    height: 105%;
     border-radius: 22px;
 }
 
@@ -255,5 +338,71 @@ section {
 
 /* ------------------------------------------------------------------------ */
 
+.project {
+    padding-bottom: 40px;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 85.4px;
+    padding-top: 40px;
+}
+
+ul {
+    margin-top: 26.6px;
+    color: var(--text-color);
+    padding-bottom: 20px;
+}
+
+li {
+    font-size: 20px;
+}
+
+li span {
+    font-size: 16px;
+}
+
+.project-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 376.16px;
+    padding-top: 20px;
+}
+
+.project-image,
+.model-code-image,
+.training-code-image {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    max-height: 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px var(--shadow-color);
+    cursor: pointer;
+    transition: transform 0.15s ease,
+                box-shadow 0.15s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.5);
+    box-shadow: 0 10px 10px var(--alt-button-shadow-color);
+}
+
+.project-image:active {
+    transform: scale(2);
+    box-shadow: 0 10px 10px var(--alt-button-shadow-color);
+}
+
+.caption {
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 10px;
+}
 
 /* ------------------------------------------------------------------------ */

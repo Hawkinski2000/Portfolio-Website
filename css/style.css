@@ -11,6 +11,9 @@ body {
     --alt-button-shadow-color: rgba(0, 0, 0, 0.25);
 }
 
+/* ------------------------------------------------------------------------ */
+/* ---- Theme Button ---- */
+
 .theme-button {
     background-color: white;
     display: flex;
@@ -67,6 +70,9 @@ body {
   box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
 }
 
+/* ------------------------------------------------------------------------ */
+/* ---- Header ---- */
+
 p {
     margin-top: 8px;
     padding: 0.89px 0 0 0;
@@ -114,6 +120,7 @@ h2 {
 }
 
 /* ------------------------------------------------------------------------ */
+/* ---- GitHub/LinkedIn Buttons ---- */
 
 .links {
     display: flex;
@@ -202,6 +209,7 @@ h2 {
 }
 
 /* ------------------------------------------------------------------------ */
+/* ---- Background/Sections ---- */
 
 .background {
     display: flex;
@@ -224,7 +232,7 @@ main {
     padding-top: 20px;
     padding-bottom: 100px;
     transition: background-color 1s ease,
-                box-shadow 1s ease;         
+                box-shadow 1s ease;
 }
 
 section {
@@ -233,6 +241,7 @@ section {
 }
 
 /* ------------------------------------------------------------------------ */
+/* ---- Skills Section ---- */
 
 .skills-row {
     display: flex;
@@ -337,6 +346,7 @@ section {
 }
 
 /* ------------------------------------------------------------------------ */
+/* ---- Projects Section ---- */
 
 .project {
     padding-bottom: 40px;
@@ -404,5 +414,3 @@ li span {
     text-align: center;
     padding-bottom: 10px;
 }
-
-/* ------------------------------------------------------------------------ */

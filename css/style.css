@@ -11,6 +11,16 @@ body {
     --alt-button-shadow-color: rgba(0, 0, 0, 0.25);
 }
 
+body.dark-theme {
+  --header-color: rgba(0, 0, 0, 0.95);
+  --text-color: white;
+  --shadow-color: rgba(255, 255, 255, 0.15);
+  --button-shadow-color: rgba(255, 255, 255, 0.5);
+  --alt-button-shadow-color: rgba(255, 255, 255, 0.25);
+  --background-color: rgba(0, 0, 0, 0.9);
+  --main-color: black;
+}
+
 /* ------------------------------------------------------------------------ */
 /* ---- Theme Button ---- */
 
@@ -46,28 +56,6 @@ body {
 
 .theme-icon {
     height: 123%;
-}
-
-#theme-checkbox:checked ~ .page {
-  --header-color: rgba(0, 0, 0, 0.95);
-  --text-color: white;
-  --shadow-color: rgba(255, 255, 255, 0.15);
-  --button-shadow-color: rgba(255, 255, 255, 0.5);
-  --alt-button-shadow-color: rgba(255, 255, 255, 0.25);
-  --background-color: rgba(0, 0, 0, 0.9);
-  --main-color: black;
-}
-
-#theme-checkbox:checked ~ .theme-button {
-  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
-}
-
-#theme-checkbox:checked ~ .theme-button:hover {
-  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.25);
-}
-
-#theme-checkbox:checked ~ .theme-button:active {
-  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
 }
 
 /* ------------------------------------------------------------------------ */

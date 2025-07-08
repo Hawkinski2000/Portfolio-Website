@@ -371,9 +371,7 @@ li span {
     padding-top: 20px;
 }
 
-.project-image,
-.model-code-image,
-.training-code-image {
+.project-image {
     background-color: rgba(0, 0, 0, 0);
     display: flex;
     max-height: 100%;
@@ -390,6 +388,7 @@ li span {
 .project-image:hover {
     transform: scale(1.5);
     box-shadow: 0 10px 10px var(--alt-button-shadow-color);
+    z-index: 1;
 }
 
 .project-image:active {

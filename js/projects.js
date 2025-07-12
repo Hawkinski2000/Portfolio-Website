@@ -152,7 +152,6 @@ projects.forEach(project => {
           ${project.captions[index] || ''}
         </p>
         <img class="project-image" src="${image}">
-        </div>
       </div>
     `;
   });

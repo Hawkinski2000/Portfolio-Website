@@ -62,11 +62,11 @@ body.dark-theme {
 /* ---- Header ---- */
 
 p {
-    margin-top: 8px;
     padding: 0.89px 0 0 0;
     margin: 0;
     color: var(--text-color);
     transition: color 1s ease;
+    line-height: 150%;
 }
 
 .header {
@@ -224,8 +224,12 @@ main {
 }
 
 section {
-    padding: 20px 0 20px 0;
+    padding: 20px 20px 40px 20px;
+    margin-bottom: 40px;
     width: 61.8%;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px var(--shadow-color);
+    transition: box-shadow 1s ease;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -337,7 +341,7 @@ section {
 /* ---- Projects Section ---- */
 
 .project {
-    padding-bottom: 40px;
+    padding-bottom: 80px;
 }
 
 .project-header {

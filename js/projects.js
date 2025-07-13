@@ -118,9 +118,9 @@ projects.forEach(project => {
   projectsHTML += `
     <div class="project">
     <div class="project-header">
-      <h2>
+      <h3>
         ${project.name}:
-      </h2>
+      </h3>
       <a class="github-button"
       href="${project.githubLink}" target="_blank">
         <img class="github-logo" src="assets/github-logo.svg">

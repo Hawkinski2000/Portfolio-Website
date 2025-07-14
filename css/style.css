@@ -1,14 +1,14 @@
 body {
-    font-family: Outfit, Arial;
-    font-size: 16px;
-    margin: 0 0 0 0;
-    --header-color: rgba(0, 0, 0, 0.05);
-    --background-color: rgba(0, 0, 0, 0.1);
-    --main-color: white;
-    --text-color: black;
-    --shadow-color: rgba(0, 0, 0, 0.15);
-    --button-shadow-color: rgba(0, 0, 0, 0.5);
-    --alt-button-shadow-color: rgba(0, 0, 0, 0.25);
+  font-family: Outfit, Arial;
+  font-size: 16px;
+  margin: 0 0 0 0;
+  --header-color: rgba(0, 0, 0, 0.05);
+  --background-color: rgba(0, 0, 0, 0.1);
+  --main-color: white;
+  --text-color: black;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --button-shadow-color: rgba(0, 0, 0, 0.5);
+  --alt-button-shadow-color: rgba(0, 0, 0, 0.25);
 }
 
 body.dark-theme {
@@ -25,398 +25,377 @@ body.dark-theme {
 /* ---- Theme Button ---- */
 
 .theme-button {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 22px;
-    box-shadow: 0 5px 10px var(--button-shadow-color);
-    padding: 0 0 0 0;
-    height: 43px;
-    width: 43px;
-    position: absolute;
-    right: 32.7px;
-    top: 32.7px;
-    z-index: 1;
-    cursor: pointer;
-    transition: transform 0.15s ease,
-                box-shadow 0.15s ease;
+  position: absolute;
+  right: 32.7px;
+  top: 32.7px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 43px;
+  width: 43px;
+  padding: 0 0 0 0;
+  border: none;
+  background-color: white;
+  box-shadow: 0 5px 10px var(--button-shadow-color);
+  border-radius: 22px;
+  cursor: pointer;
+  transition: transform 0.15s ease,
+              box-shadow 0.15s ease;
 }
 
 .theme-button:hover {
-    transform: scale(1.15);
-    box-shadow: 0 10px 10px var(--alt-button-shadow-color);
+  transform: scale(1.15);
+  box-shadow: 0 10px 10px var(--alt-button-shadow-color);
 }
 
 .theme-button:active {
-    transform: scale(1);
-    box-shadow: 0 5px 10px var(--button-shadow-color);
+  transform: scale(1);
+  box-shadow: 0 5px 10px var(--button-shadow-color);
 }
 
 .theme-icon {
-    height: 123%;
+  height: 123%;
 }
 
 /* ------------------------------------------------------------------------ */
 /* ---- Header ---- */
 
 p {
-    padding: 0.89px 0 0 0;
-    margin: 0;
-    color: var(--text-color);
-    transition: color 1s ease;
-    line-height: 150%;
+  padding: 0.89px 0 0 0;
+  margin: 0;
+  line-height: 150%;
+  color: var(--text-color);
+  transition: color 1s ease;
 }
 
 .header {
-    height: 237.9px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: var(--header-color);
-    box-shadow: 0 10px 15px var(--shadow-color);
-    position: relative;
-    transition: background-color 1s ease,
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 237.9px;
+  text-align: center;
+  background-color: var(--header-color);
+  box-shadow: 0 10px 15px var(--shadow-color);
+  transition: background-color 1s ease,
                 box-shadow 1s ease;
 }
 
 .header-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h1 {
-    font-size: 42px;
-    font-weight: 700;
-    margin: 0;
-    color: var(--text-color);
-    transition: color 1s ease;
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-color);
+  transition: color 1s ease;
 }
 
 h2 {
-    font-size: 34px;
-    font-weight: 400;
-    margin: 0;
-    color: var(--text-color);
-    transition: color 1s ease;
+  margin: 0;
+  font-size: 34px;
+  font-weight: 400;
+  color: var(--text-color);
+  transition: color 1s ease;
 }
 
 h3 {
-    font-size: 18px;
-    font-weight: 400;
-    color: gray;
-    margin: 0;
-    padding: 5px 0 10px 0;
-    transition: color 1s ease;
+  margin: 0;
+  padding: 5px 0 10px 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: gray;
+  transition: color 1s ease;
 }
 
 /* ------------------------------------------------------------------------ */
 /* ---- GitHub/LinkedIn Buttons ---- */
 
 .links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 112.6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 112.6px;
 }
 
 .github-button {
-    background-color: white;
-    border: none;
-    border-radius: 22px;
-    box-shadow: 0 5px 10px var(--button-shadow-color);
-    padding: 0 0 0 0;
-    height: 43px;
-    width: 43px;
-    cursor: pointer;
-    transition: transform 0.15s ease,
+  height: 43px;
+  width: 43px;
+  padding: 0 0 0 0;
+  border: none;
+  background-color: white;
+  box-shadow: 0 5px 10px var(--button-shadow-color);
+  border-radius: 22px;
+  cursor: pointer;
+  transition: transform 0.15s ease,
                 box-shadow 0.15s ease;
 }
 
 .linkedin-button {
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px var(--button-shadow-color);
-    padding: 0 0 0 0;
-    height: 43px;
-    width: 43px;
-    cursor: pointer;
-    transition: transform 0.15s ease,
+  height: 43px;
+  width: 43px;
+  padding: 0 0 0 0;
+  border: none;
+  background-color: white;
+  box-shadow: 0 5px 10px var(--button-shadow-color);
+  border-radius: 5px;  
+  cursor: pointer;
+  transition: transform 0.15s ease,
                 box-shadow 0.15s ease;
 }
 
 .github-button:hover,
 .linkedin-button:hover {
-    transform: scale(1.15);
-    box-shadow: 0 10px 10px var(--alt-button-shadow-color);
+  transform: scale(1.15);
+  box-shadow: 0 10px 10px var(--alt-button-shadow-color);
 }
 
 .github-button:active,
 .linkedin-button:active {
-    transform: scale(1);
-    box-shadow: 0 5px 10px var(--button-shadow-color);
+  transform: scale(1);
+  box-shadow: 0 5px 10px var(--button-shadow-color);
 }
 
-.github-logo {
-    height: 100%;
-}
-
+.github-logo,
 .linkedin-logo {
-    height: 100%;
+  height: 100%;
 }
 
 .github-button,
 .linkedin-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .github-button .tooltip,
 .linkedin-button .tooltip,
 .theme-button .tooltip {
-    position: absolute;
-    background-color: gray;
-    color: white;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 2px;
-    font-size: 12px;
-    bottom: -30px;
-    opacity: 0;
-    transition: opacity 0.15s;
-    pointer-events: none;
-    white-space: nowrap;
+  position: absolute;
+  bottom: -30px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: white;
+  background-color: gray;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 .github-button:hover .tooltip,
 .linkedin-button:hover .tooltip,
 .theme-button:hover .tooltip {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* ------------------------------------------------------------------------ */
 /* ---- Background/Sections ---- */
 
 .background {
-    display: flex;
-    justify-content: center;
-    background-color: var(--background-color);
-    padding-bottom: 50px;
-    transition: background-color 1s ease;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  background-color: var(--background-color);
+  transition: background-color 1s ease;
 }
 
 main {
-    width: 61.8%;
-    height: 100%;
-    background-color: var(--main-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    box-shadow: -10px 0 10px -5px var(--shadow-color),
-                 10px 10px 10px -5px var(--shadow-color);
-    padding-top: 20px;
-    padding-bottom: 40px;
-    transition: background-color 1s ease,
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 61.8%;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: var(--main-color);
+  box-shadow: -10px 0 10px -5px var(--shadow-color),
+                10px 10px 10px -5px var(--shadow-color);
+  transition: background-color 1s ease,
                 box-shadow 1s ease;
 }
 
 section {
-    padding: 20px 20px 40px 20px;
-    margin-bottom: 40px;
-    width: 61.8%;
-    border-radius: 20px;
-    box-shadow: 0 10px 15px var(--shadow-color);
-    transition: box-shadow 1s ease;
+  padding: 20px 20px 40px 20px;
+  margin-bottom: 40px;
+  width: 61.8%;
+  box-shadow: 0 10px 15px var(--shadow-color);
+  border-radius: 20px;
+  transition: box-shadow 1s ease;
 }
 
 /* ------------------------------------------------------------------------ */
 /* ---- Skills Section ---- */
 
 .skills-row {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 26.6px 0 26.6px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 26.6px 0;
 }
 
 .skill-button {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border: none;
-    border-radius: 22px;
-    box-shadow: 0 5px 10px var(--button-shadow-color);
-    padding: 0 0 0 0;
-    height: 43px;
-    width: 43px;
-    cursor: pointer;
-    transition: transform 0.15s ease,
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 43px;
+  width: 43px;
+  padding: 0;
+  border: none;
+  background-color: white;
+  box-shadow: 0 5px 10px var(--button-shadow-color);
+  border-radius: 22px;
+  cursor: pointer;
+  transition: transform 0.15s ease,
                 box-shadow 0.15s ease;
 }
 
 .skill-button:hover {
-    transform: scale(1.15);
-    box-shadow: 0 10px 10px var(--alt-button-shadow-color);
+  transform: scale(1.15);
+  box-shadow: 0 10px 10px var(--alt-button-shadow-color);
 }
 
 .skill-button:active {
-    transform: scale(1);
-    box-shadow: 0 5px 10px var(--button-shadow-color);
-}
-
-.python-logo {
-    height: 90%;
-    position: absolute;
-    top: 5px;
-}
-
-.cpp-logo {
-    height: 80%;
-}
-
-.tensorflow-logo {
-    height: 80%;
-}
-
-.huggingface-logo {
-    height: 80%;
-}
-
-.nvidia-logo {
-    height: 60%;
-    position: absolute;
-    top: 7px;
-}
-
-.aws-logo {
-    height: 105%;
-    border-radius: 22px;
-}
-
-.gcp-logo {
-    height: 80%;
-}
-
-.git-logo {
-    height: 80%;
-}
-
-.postgresql-logo {
-    height: 80%;
-    position: absolute;
-    top: 7px;
+  transform: scale(1);
+  box-shadow: 0 5px 10px var(--button-shadow-color);
 }
 
 .logo {
-    height: 100%;
+  height: 100%;
+}
+
+.python-logo {
+  height: 90%;
+  position: absolute;
+  top: 5px;
+}
+
+.cpp-logo,
+.tensorflow-logo,
+.huggingface-logo,
+.gcp-logo,
+.git-logo {
+  height: 80%;
+}
+
+.nvidia-logo {
+  position: absolute;
+  top: 7px;
+  height: 60%;
+}
+
+.aws-logo {
+  height: 105%;
+  border-radius: 22px;
+}
+
+.postgresql-logo {
+  height: 80%;
+  position: absolute;
+  top: 7px;
 }
 
 .skill-button .tooltip {
-    position: absolute;
-    background-color: gray;
-    color: white;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 2px;
-    font-size: 12px;
-    bottom: -30px;
-    opacity: 0;
-    transition: opacity 0.15s;
-    pointer-events: none;
-    white-space: nowrap;
+  position: absolute;
+  bottom: -30px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: white;
+  background-color: gray;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 .skill-button:hover .tooltip {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* ------------------------------------------------------------------------ */
 /* ---- Projects Section ---- */
 
 .project {
-    padding: 20px 20px 80px 20px;
-    margin: 40px 0 40px 0;
-    border-radius: 20px;
-    transition: box-shadow 0.15s ease;
+  padding: 20px 20px 80px 20px;
+  margin: 40px 0 40px 0;
+  border-radius: 20px;
+  transition: box-shadow 0.15s ease;
 }
 
 .project:hover {
-    box-shadow: 0 10px 10px var(--alt-button-shadow-color);
+  box-shadow: 0 10px 10px var(--alt-button-shadow-color);
 }
 
 .project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 85.4px;
-    padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 85.4px;
+  padding-top: 40px;
 }
 
 ul {
-    margin-top: 26.6px;
-    color: var(--text-color);
-    padding-bottom: 20px;
+  margin-top: 26.6px;
+  padding-bottom: 20px;
+  color: var(--text-color);
 }
 
 li {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 li span {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .project-image-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 376.16px;
-    padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 376.16px;
+  padding-top: 20px;
 }
 
 .project-image {
-    background-color: rgba(0, 0, 0, 0);
-    display: flex;
-    max-height: 100%;
-    max-width: 100%;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    box-shadow: 0 10px 15px var(--shadow-color);
-    cursor: pointer;
-    transition: transform 0.15s ease,
+  display: flex;
+  max-height: 100%;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 10px 15px var(--shadow-color);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.15s ease,
                 box-shadow 0.15s ease;
 }
 
 .project-image:hover {
-    transform: scale(1.5);
-    box-shadow: 0 10px 10px var(--alt-button-shadow-color);
-    z-index: 1;
+  transform: scale(1.5);
+  z-index: 1;
+  box-shadow: 0 10px 10px var(--alt-button-shadow-color);
 }
 
 .project-image:active {
-    transform: scale(2);
-    box-shadow: 0 10px 10px var(--alt-button-shadow-color);
+  transform: scale(2);
+  box-shadow: 0 10px 10px var(--alt-button-shadow-color);
 }
 
 .caption {
-    font-size: 14px;
-    text-align: center;
-    padding-bottom: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
 }

@@ -116,7 +116,7 @@ projects.forEach(project => {
 
   // Generate HTML for title and GitHub button
   projectsHTML += `
-    <div class="project">
+    <article class="project">
     <div class="project-header">
       <h3>
         ${project.name}:
@@ -156,7 +156,7 @@ projects.forEach(project => {
     `;
   });
 
-  projectsHTML += '</div>';
+  projectsHTML += '</article>';
 });
 
 // Add all of the HTML generated the list of projects to the page

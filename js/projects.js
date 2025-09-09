@@ -3,22 +3,22 @@ export const projects = [{
   githubTooltipName: 'AI Fitness Tracker',
   githubLink: 'https://github.com/Hawkinski2000/AI-Fitness-Tracker',
   bullets: [
-    `A full-stack web app that leverages AI to generate personalized insights
-    from users&apos; diet, exercise, sleep, and mood data.`,
+    `Built a full-stack, agentic AI fitness tracker using FastAPI, Pydantic,
+    PostgreSQL, SQLAlchemy, Alembic, Docker, and EC2, featuring a
+    GPT-5-powered autonomous agent that can analyze users' health data,
+    interact with the app, call specialized tools, and generate actionable
+    recommendations.`,
 
-    `Utilizes Retrieval-Augmented Generation (RAG) with API calls to ChatGPT,
-    which acts as an intelligent agent that synthesizes insights by analyzing
-    users' historical and current health data along with prior AI-generated
-    feedback.`,
+    `Automated CI/CD with GitHub Actions, running 121+ Python tests, building
+    Docker containers, and deploying to EC2.`,
 
-    `PostgreSQL on Amazon RDS will store all health/fitness metrics and memory
-    of past insights.`,
-
-    `Will be built with a FastAPI (Python) backend and a React + TypeScript
-    frontend for responsive, modern UX.`
+    `Developed a responsive React + TypeScript frontend with HTML/CSS;
+    implemented secure authentication (JWTs, HTTP-only refresh tokens),
+    reCAPTCHA, and Nginx proxy with rate limiting for production readiness.`,
   ],
   images: [
-    'assets/Dashboard.png'
+    'assets/Dashboard.png',
+    'assets/ai-fitness-tracker-image.png'
   ],
   captions: [
     ``

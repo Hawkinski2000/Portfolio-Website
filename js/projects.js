@@ -18,7 +18,7 @@ export const projects = [{
     frontend for responsive, modern UX.`
   ],
   images: [
-    'assets/ai-fitness-tracker-image.png'
+    'assets/Dashboard.png'
   ],
   captions: [
     ``

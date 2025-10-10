@@ -17,8 +17,8 @@ export const projects = [{
     reCAPTCHA, and Nginx proxy with rate limiting for production readiness.`,
   ],
   images: [
-    'assets/Dashboard.png',
-    'assets/ai-fitness-tracker-image.png'
+    'assets/chat-page.png',
+    'assets/view-food-menu.png'
   ],
   captions: [
     ``

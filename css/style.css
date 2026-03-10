@@ -40,8 +40,9 @@ body.dark-theme {
   box-shadow: 0 5px 10px var(--button-shadow-color);
   border-radius: 22px;
   cursor: pointer;
-  transition: transform 0.15s ease,
-              box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .theme-button:hover {
@@ -79,8 +80,9 @@ p {
   text-align: center;
   background-color: var(--header-color);
   box-shadow: 0 10px 15px var(--shadow-color);
-  transition: background-color 1s ease,
-                box-shadow 1s ease;
+  transition:
+    background-color 1s ease,
+    box-shadow 1s ease;
 }
 
 .header-content {
@@ -135,8 +137,9 @@ h3 {
   box-shadow: 0 5px 10px var(--button-shadow-color);
   border-radius: 22px;
   cursor: pointer;
-  transition: transform 0.15s ease,
-                box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .linkedin-button {
@@ -146,10 +149,11 @@ h3 {
   border: none;
   background-color: white;
   box-shadow: 0 5px 10px var(--button-shadow-color);
-  border-radius: 5px;  
+  border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.15s ease,
-                box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .github-button:hover,
@@ -219,10 +223,12 @@ main {
   padding-top: 20px;
   padding-bottom: 40px;
   background-color: var(--main-color);
-  box-shadow: -10px 0 10px -5px var(--shadow-color),
-                10px 10px 10px -5px var(--shadow-color);
-  transition: background-color 1s ease,
-                box-shadow 1s ease;
+  box-shadow:
+    -10px 0 10px -5px var(--shadow-color),
+    10px 10px 10px -5px var(--shadow-color);
+  transition:
+    background-color 1s ease,
+    box-shadow 1s ease;
 }
 
 section {
@@ -279,8 +285,9 @@ section {
   box-shadow: 0 5px 10px var(--button-shadow-color);
   border-radius: 22px;
   cursor: pointer;
-  transition: transform 0.15s ease,
-                box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .skill-button:hover {
@@ -404,8 +411,9 @@ li span {
   box-shadow: 0 10px 15px var(--shadow-color);
   border-radius: 20px;
   cursor: pointer;
-  transition: transform 0.15s ease,
-                box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .project-image:hover {

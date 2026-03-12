@@ -1,0 +1,434 @@
+body {
+  font-family: Outfit, Arial;
+  font-size: 16px;
+  margin: 0 0 0 0;
+  --header-color: rgba(0, 0, 0, 0.05);
+  --background-color: rgba(0, 0, 0, 0.1);
+  --main-color: white;
+  --text-color: black;
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --button-shadow-color: rgba(0, 0, 0, 0.5);
+  --alt-button-shadow-color: rgba(0, 0, 0, 0.25);
+}
+
+body.dark-theme {
+  --header-color: rgba(0, 0, 0, 0.95);
+  --text-color: white;
+  --shadow-color: rgba(255, 255, 255, 0.15);
+  --button-shadow-color: rgba(255, 255, 255, 0.5);
+  --alt-button-shadow-color: rgba(255, 255, 255, 0.25);
+  --background-color: rgba(0, 0, 0, 0.9);
+  --main-color: black;
+}
+
+/* ------------------------------------------------------------------------ */
+/* ---- Theme Button ---- */
+
+.theme-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  padding: 0 0 0 0;
+  border: none;
+  background-color: white;
+  box-shadow: 0 5px 10px var(--button-shadow-color);
+  border-radius: 22px;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.theme-button:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 10px var(--alt-button-shadow-color);
+}
+
+.theme-button:active {
+  transform: scale(1);
+  box-shadow: 0 5px 10px var(--button-shadow-color);
+}
+
+.theme-icon {
+  height: 123%;
+}
+
+/* ------------------------------------------------------------------------ */
+/* ---- Header ---- */
+
+p {
+  padding: 0.89px 20px 0 20px;
+  margin: 0;
+  line-height: 150%;
+  color: var(--text-color);
+  transition: color 1s ease;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 237.9px;
+  text-align: center;
+  background-color: var(--header-color);
+  box-shadow: 0 10px 15px var(--shadow-color);
+  transition:
+    background-color 1s ease,
+    box-shadow 1s ease;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-color);
+  transition: color 1s ease;
+}
+
+h2 {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 34px;
+  font-weight: 400;
+  color: var(--text-color);
+  transition: color 1s ease;
+}
+
+h3 {
+  margin: 0;
+  padding: 5px 0 10px 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: gray;
+  transition: color 1s ease;
+}
+
+/* ------------------------------------------------------------------------ */
+/* ---- GitHub/LinkedIn Buttons ---- */
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 112.6px;
+}
+
+.github-button {
+  height: 43px;
+  width: 43px;
+  padding: 0 0 0 0;
+  border: none;
+  background-color: white;
+  box-shadow: 0 5px 10px var(--button-shadow-color);
+  border-radius: 22px;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.linkedin-button {
+  height: 43px;
+  width: 43px;
+  padding: 0 0 0 0;
+  border: none;
+  background-color: white;
+  box-shadow: 0 5px 10px var(--button-shadow-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.github-button:hover,
+.linkedin-button:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 10px var(--alt-button-shadow-color);
+}
+
+.github-button:active,
+.linkedin-button:active {
+  transform: scale(1);
+  box-shadow: 0 5px 10px var(--button-shadow-color);
+}
+
+.github-logo,
+.linkedin-logo {
+  height: 100%;
+}
+
+.github-button,
+.linkedin-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.github-button .tooltip,
+.linkedin-button .tooltip,
+.theme-button .tooltip {
+  position: absolute;
+  bottom: -30px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: white;
+  background-color: gray;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.github-button:hover .tooltip,
+.linkedin-button:hover .tooltip,
+.theme-button:hover .tooltip {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------------------ */
+/* ---- Background/Sections ---- */
+
+.background {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 49.4px;
+  background-color: var(--background-color);
+  transition: background-color 1s ease;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: var(--main-color);
+  box-shadow:
+    -10px 0 10px -5px var(--shadow-color),
+    10px 10px 10px -5px var(--shadow-color);
+  transition:
+    background-color 1s ease,
+    box-shadow 1s ease;
+}
+
+section {
+  padding: 20px 0 40px 0;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 15px var(--shadow-color);
+  border-radius: 20px;
+  transition: box-shadow 1s ease;
+}
+
+main,
+section {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  main,
+  section {
+    width: 61.8%;
+  }
+
+  .project-image-container {
+    height: 376.2px;
+  }
+
+  .theme-button {
+    right: 32.7px;
+    top: 32.7px;
+    height: 43px;
+    width: 43px;
+  }
+}
+
+/* ------------------------------------------------------------------------ */
+/* ---- Skills Section ---- */
+
+.skills-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 26.6px 0;
+}
+
+.skill-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 43px;
+  width: 43px;
+  padding: 0;
+  border: none;
+  background-color: white;
+  box-shadow: 0 5px 10px var(--button-shadow-color);
+  border-radius: 22px;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.skill-button:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 10px var(--alt-button-shadow-color);
+}
+
+.skill-button:active {
+  transform: scale(1);
+  box-shadow: 0 5px 10px var(--button-shadow-color);
+}
+
+.logo {
+  height: 100%;
+}
+
+.python-logo {
+  height: 90%;
+  position: absolute;
+  top: 5px;
+}
+
+.cpp-logo,
+.tensorflow-logo,
+.huggingface-logo,
+.gcp-logo,
+.git-logo {
+  height: 80%;
+}
+
+.nvidia-logo {
+  position: absolute;
+  top: 7px;
+  height: 60%;
+}
+
+.aws-logo {
+  height: 105%;
+  border-radius: 22px;
+}
+
+.postgresql-logo {
+  height: 80%;
+  position: absolute;
+  top: 7px;
+}
+
+.skill-button .tooltip {
+  position: absolute;
+  bottom: -30px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: white;
+  background-color: gray;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.skill-button:hover .tooltip {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------------------ */
+/* ---- Projects Section ---- */
+
+.projects {
+  padding-bottom: 89.4px;
+}
+
+.project {
+  padding: 20px 20px 80px 20px;
+  margin: 40px 0 40px 0;
+  border-radius: 20px;
+  transition: box-shadow 0.15s ease;
+}
+
+.project:hover {
+  box-shadow: 0 10px 10px var(--alt-button-shadow-color);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 85.4px;
+  padding-top: 40px;
+}
+
+ul {
+  margin-top: 26.6px;
+  padding-bottom: 20px;
+  color: var(--text-color);
+}
+
+li {
+  font-size: 20px;
+}
+
+li span {
+  font-size: 16px;
+}
+
+.project-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.project-image {
+  display: flex;
+  max-height: 100%;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 10px 15px var(--shadow-color);
+  border-radius: 20px;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.5);
+  z-index: 1;
+  box-shadow: 0 10px 10px var(--alt-button-shadow-color);
+}
+
+.project-image:active {
+  transform: scale(2);
+  box-shadow: 0 10px 10px var(--alt-button-shadow-color);
+}
+
+.caption {
+  padding-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+}

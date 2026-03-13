@@ -1,106 +1,81 @@
-import { projects, type Project } from "./projects.ts";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import { projects, type Project, type ProjectImage } from './projects'
+import Header from './components/header.tsx'
+import GitHubButton from './components/github-button.tsx'
 
 function App() {
+  const theme = localStorage.getItem('portfolio-theme')
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark')
+  } else {
+    document.documentElement.classList.add('dark')
+  }
+
   return (
-    <>
-      <button className="theme-button js-theme-button">
-        <img className="theme-icon" src="assets/theme-icon.svg" />
-        <div className="tooltip">Theme</div>
-      </button>
+    <div className="flex flex-col items-center">
+      <Header />
 
-      <header className="header">
-        <div className="header-content">
-          <h1>Kieran Hawkins</h1>
+      <main className="flex w-[50vw] items-center">
+        <section className="flex flex-col gap-8 py-4">
+          <h2 className="text-2xl">Projects</h2>
 
-          <h3>
-            I'm a recent Computer Science graduate from CSUSM.
-            <br />
-            I'm passionate about AI and Machine Learning.
-          </h3>
+          {projects.map((project: Project) => {
+            return (
+              <Card key={project.name} className="p-4">
+                <CardHeader>
+                  <CardTitle>{project.name}</CardTitle>
 
-          <nav className="links">
-            <a
-              className="github-button"
-              href="https://github.com/Hawkinski2000"
-              target="_blank"
-            >
-              <img className="github-logo" src="assets/github-logo.svg" />
-              <div className="tooltip">GitHub</div>
-            </a>
+                  <CardAction>
+                    <GitHubButton />
+                  </CardAction>
+                </CardHeader>
 
-            <a
-              className="linkedin-button"
-              href="https://www.linkedin.com/in/kieran-hawkins-b5558130b/"
-              target="_blank"
-            >
-              <img className="linkedin-logo" src="assets/linkedin-logo.png" />
-              <div className="tooltip">LinkedIn</div>
-            </a>
-          </nav>
-        </div>
-      </header>
-
-      <div className="background">
-        <main>
-          <section className="projects js-projects">
-            <h2>Projects</h2>
-
-            {projects.map((project: Project) => {
-              return (
-                <article className="project" key={project.name}>
-                  <div className="project-header">
-                    <h3>{project.name}:</h3>
-
-                    <a
-                      className="github-button"
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        className="github-logo"
-                        src="/assets/github-logo.svg"
-                        alt="GitHub"
-                      />
-
-                      <div className="tooltip">{project.githubTooltipName}</div>
-                    </a>
-                  </div>
-
-                  <ul style={{ paddingLeft: "20px" }}>
+                <CardContent className="flex flex-col gap-4">
+                  <ul className="flex list-disc flex-col gap-2 pl-4">
                     {project.bullets.map((bullet, i) => (
                       <li key={i}>
-                        <span>{bullet}</span>
+                        <CardDescription className="text-foreground">{bullet}</CardDescription>
                       </li>
                     ))}
                   </ul>
 
-                  {project.images.map((image, index) => (
-                    <div className="project-image-container" key={index}>
-                      <p className="caption">{project.captions[index] || ""}</p>
+                  {project.images.map((image: ProjectImage, index) => (
+                    <div className="flex flex-col items-center justify-center" key={index}>
+                      <p className="pb-2 text-sm">
+                        {(project.captions && project.captions[index]) || ''}
+                      </p>
 
                       <img
-                        className="project-image"
-                        src={image}
+                        src={image.src}
+                        style={image.scale ? { maxWidth: `${image.scale * 100}%` } : undefined}
                         alt={`${project.name} screenshot`}
+                        className="h-auto rounded-xl"
                       />
                     </div>
                   ))}
-                </article>
-              );
-            })}
-          </section>
+                </CardContent>
+              </Card>
+            )
+          })}
+        </section>
 
-          <section>
+        {/* <section>
             <h2>Education</h2>
             <p>California State University San Marcos</p>
             <p>Bachelor of Science in Computer Science</p>
             <p>
               <b>Graduated:</b> 5/17/2025
             </p>
-          </section>
+          </section> */}
 
-          <section>
+        {/* <section>
             <h2>Skills</h2>
 
             <p>
@@ -120,11 +95,10 @@ function App() {
             <p>
               <b>Libraries:</b> SQLAlchemy, pandas, NumPy, Matplotlib
             </p>
-          </section>
-        </main>
-      </div>
-    </>
-  );
+          </section> */}
+      </main>
+    </div>
+  )
 }
 
-export default App;
+export default App

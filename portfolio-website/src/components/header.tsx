@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Sun, Moon } from 'lucide-react'
 import { LinkedInLogoIcon } from '@radix-ui/react-icons'
-import GitHubButton from './github-button'
+import GitHubButton from '@/components/github-button'
 
 export default function Header() {
   const [isDark, setIsDark] = useState(() => {

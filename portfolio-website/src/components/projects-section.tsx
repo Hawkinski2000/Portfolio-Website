@@ -11,7 +11,7 @@ import { projects, type Project, type ProjectImage } from '@/projects'
 
 export default function ProjectsSection() {
   return (
-    <section className="flex flex-col gap-8 py-4">
+    <section className="flex w-full flex-col gap-8 py-4">
       <h2 className="text-2xl">Projects</h2>
 
       {projects.map((project: Project) => {

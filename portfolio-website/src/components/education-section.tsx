@@ -2,8 +2,8 @@ import { Card, CardContent, CardDescription } from '@/components/ui/card'
 
 export default function EducationSection() {
   return (
-    <section className="flex w-full flex-col py-4">
-      <h2 className="pb-2 text-2xl">Education</h2>
+    <section className="flex w-full max-w-4xl flex-col py-4">
+      <h2 className="px-4 pb-2 text-2xl">Education</h2>
 
       <Card>
         <CardContent>

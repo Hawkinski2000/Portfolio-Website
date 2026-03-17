@@ -11,35 +11,35 @@ import { projects, type Project, type ProjectImage } from '@/projects'
 
 export default function ProjectsSection() {
   return (
-    <section className="flex max-w-4xl flex-col py-12">
-      <h2 className="px-4 pb-4 text-2xl font-bold">Projects</h2>
+    <section className="flex max-w-4xl flex-col">
+      <h2 className="bg-background sticky top-0 px-4 py-8 text-9xl font-bold">Projects</h2>
 
-      <div className="flex flex-col gap-8 p-4">
+      <div className="flex flex-col gap-8 px-4 py-8">
         {projects.map((project: Project) => {
           return (
             <Card key={project.name} className="p-4">
               <CardHeader>
-                <CardTitle>{project.name}</CardTitle>
+                <CardTitle className="text-4xl font-bold">{project.name}</CardTitle>
 
                 <CardAction>
-                  <GitHubButton />
+                  <GitHubButton href={project.githubLink} />
                 </CardAction>
               </CardHeader>
 
               <CardContent className="flex flex-col gap-4">
-                <ul className="flex list-disc flex-col gap-2 pl-4">
+                <ul className="flex list-disc flex-col gap-2 px-4">
                   {project.bullets.map((bullet, i) => (
-                    <li key={i}>
-                      <CardDescription className="text-foreground">{bullet}</CardDescription>
-                    </li>
+                    <CardDescription className="text-foreground text-base">
+                      <li key={i}>{bullet}</li>
+                    </CardDescription>
                   ))}
                 </ul>
 
                 {project.images.map((image: ProjectImage, index) => (
                   <div className="flex flex-col items-center justify-center" key={index}>
-                    <p className="pb-2 text-sm">
+                    <CardDescription className="pb-2 text-sm">
                       {(project.captions && project.captions[index]) || ''}
-                    </p>
+                    </CardDescription>
 
                     <img
                       src={image.src}

@@ -6,7 +6,7 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
   { title: 'Languages', skills: ['Python', 'SQL', 'JavaScript/TypeScript', 'C/C++', 'HTML/CSS'] },
   { title: 'Databases', skills: ['PostgreSQL', 'Redis'] },
-  { title: 'Frameworks', skills: ['PyTorch', 'FastAPI', 'React', 'pytest', 'Alembic'] },
+  { title: 'Frameworks', skills: ['PyTorch', 'FastAPI', 'React', 'Pytest', 'Alembic'] },
   { title: 'Developer Tools', skills: ['Git', 'Docker', 'Amazon Web Services', 'GitHub Actions'] },
-  { title: 'Libraries', skills: ['SQLAlchemy', 'pandas', 'NumPy', 'Matplotlib'] },
+  { title: 'Libraries', skills: ['SQLAlchemy', 'Pandas', 'NumPy', 'Matplotlib'] },
 ]

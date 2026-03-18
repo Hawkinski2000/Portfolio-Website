@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="flex flex-col">
-      <div className="fixed top-0 right-0 z-100 flex gap-2 px-2 pt-2">
+      <div className="absolute top-0 right-0 z-100 flex sm:fixed sm:gap-2 sm:px-2 sm:pt-2">
         <GitHubButton />
         <Separator orientation="vertical" />
         <LinkedInButton />
@@ -26,8 +26,10 @@ function App() {
 
       <main className="relative">
         <section className="bg-background sticky top-0 flex h-screen w-full items-center justify-center">
-          <div className="w-full max-w-4xl">
-            <h1 className="max-w-4xl px-4 text-left text-9xl font-bold">Kieran Hawkins</h1>
+          <div className="w-full max-w-2xl sm:max-w-4xl">
+            <h1 className="max-w-2xl px-4 text-left text-6xl font-bold sm:max-w-4xl sm:text-9xl">
+              Kieran Hawkins
+            </h1>
           </div>
         </section>
 

@@ -47,6 +47,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             sudo rm -rf /usr/share/nginx/html/*
-            sudo cp -r /tmp/portfolio/dist/* /usr/share/nginx/html/
+            sudo cp -r /tmp/portfolio/portfolio-website/dist/* /usr/share/nginx/html/
             rm -rf /tmp/portfolio
             sudo nginx -s reload

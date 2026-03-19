@@ -87,7 +87,18 @@ export const projects: Project[] = [
     name: 'SpeechCommandsBERT',
     githubLink: 'https://github.com/Hawkinski2000/SpeechCommandsBERT',
     bullets: [
-      'A transformer model from scratch for single-word speech classification for the Google Speech Commands dataset using a modified version of Andrej Karpathy&apos;s GPT-2 code.',
+      <>
+        A transformer model from scratch for single-word speech classification for the Google Speech
+        Commands dataset using a modified version of{' '}
+        <a
+          href="https://github.com/karpathy/build-nanogpt"
+          target="_blank"
+          rel="noreferrer"
+          className="text-chart-2 underline-offset-4 hover:underline"
+        >
+          Andrej Karpathy's GPT-2 code.
+        </a>
+      </>,
 
       'Trained on an 8x A100 GPU instance from Lambda Labs.',
 

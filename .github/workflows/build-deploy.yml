@@ -1,0 +1,52 @@
+name: Build and Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: "npm"
+          cache-dependency-path: portfolio-website/package-lock.json
+
+      - name: Install dependencies
+        working-directory: portfolio-website
+        run: npm ci
+
+      - name: Build
+        working-directory: portfolio-website
+        run: npm run build
+
+      - name: Copy dist to EC2
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ec2-user
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: portfolio-website/dist/
+          target: /tmp/portfolio/
+
+      - name: Deploy on EC2
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ec2-user
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            sudo rm -rf /usr/share/nginx/html/*
+            sudo cp -r /tmp/portfolio/dist/* /usr/share/nginx/html/
+            rm -rf /tmp/portfolio
+            sudo nginx -s reload

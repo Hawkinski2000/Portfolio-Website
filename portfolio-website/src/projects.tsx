@@ -7,7 +7,7 @@ export interface ProjectImage {
 
 export interface Project {
   name: string
-  githubLink: string
+  githubLink?: string
   bullets: ReactNode[]
   images: ProjectImage[]
   captions?: ReactNode[]
@@ -111,7 +111,6 @@ export const projects: Project[] = [
 
   {
     name: 'CookLit',
-    githubLink: 'https://github.com/AimanMadan/CookLit',
     bullets: [
       'AI-powered cooking assistant for Android that generates recipes from ingredient images.',
 

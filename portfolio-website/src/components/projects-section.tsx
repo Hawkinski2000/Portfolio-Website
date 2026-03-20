@@ -24,9 +24,11 @@ export default function ProjectsSection() {
                 <CardHeader className="flex items-center justify-between px-0 sm:px-2">
                   <CardTitle className="text-xl font-bold sm:text-4xl">{project.name}</CardTitle>
 
-                  <CardAction>
-                    <GitHubButton href={project.githubLink} />
-                  </CardAction>
+                  {project.githubLink && (
+                    <CardAction>
+                      <GitHubButton href={project.githubLink} />
+                    </CardAction>
+                  )}
                 </CardHeader>
 
                 <CardContent className="flex flex-col gap-4">

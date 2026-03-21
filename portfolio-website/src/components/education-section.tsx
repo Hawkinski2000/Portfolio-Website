@@ -8,7 +8,7 @@ export default function EducationSection() {
           Education
         </h2>
 
-        <div className="px-2 py-4 sm:px-4 sm:py-8">
+        <div className="flex flex-col gap-2 px-2 py-4 sm:px-4 sm:py-8">
           <Card>
             <CardContent>
               <CardDescription className="text-foreground text-xl font-bold sm:text-4xl">
@@ -18,7 +18,21 @@ export default function EducationSection() {
                 Bachelor of Science in Computer Science
               </CardDescription>
               <CardDescription className="text-muted-foreground text-sm sm:text-base">
-                Graduated 5/17/2025
+                Graduated May 2025
+              </CardDescription>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent>
+              <CardDescription className="text-foreground text-xl font-bold sm:text-4xl">
+                Palomar College
+              </CardDescription>
+              <CardDescription className="text-foreground text-lg sm:text-xl">
+                Computer Science (Transfer)
+              </CardDescription>
+              <CardDescription className="text-muted-foreground text-sm sm:text-base">
+                Graduated December 2023
               </CardDescription>
             </CardContent>
           </Card>

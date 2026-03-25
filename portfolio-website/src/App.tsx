@@ -1,7 +1,4 @@
-import { Separator } from '@/components/ui/separator'
-import GitHubButton from '@/components/github-button'
-import LinkedInButton from '@/components/linkedin-button'
-import ThemeButton from '@/components/theme-button'
+import ActionButtons from './components/action-buttons'
 import HeroSection from '@/components/hero-section'
 import SkillsSection from '@/components/skills-section'
 import ProjectsSection from '@/components/projects-section'
@@ -17,13 +14,7 @@ function App() {
 
   return (
     <>
-      <div className="absolute top-0 right-0 z-100 flex sm:fixed sm:gap-2 sm:px-2 sm:pt-2">
-        <GitHubButton />
-        <Separator orientation="vertical" />
-        <LinkedInButton />
-        <Separator orientation="vertical" />
-        <ThemeButton />
-      </div>
+      <ActionButtons />
 
       <main>
         <HeroSection />

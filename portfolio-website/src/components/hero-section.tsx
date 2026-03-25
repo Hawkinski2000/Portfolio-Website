@@ -1,4 +1,4 @@
-import TextType from '@/components/TextType'
+import TextType from '@/components/text-type'
 
 export default function HeroSection() {
   return (
